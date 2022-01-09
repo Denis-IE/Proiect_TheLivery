@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheLiveryDesktop2.0", "TheLiveryDesktop2.0\TheLiveryDesktop2.0.csproj", "{263C54A8-9401-4774-A70E-6EB5721E6481}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoLotModel", "AutoLotModel\AutoLotModel.csproj", "{5DFECC55-530E-436A-A766-0A4595C70B33}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{263C54A8-9401-4774-A70E-6EB5721E6481}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{263C54A8-9401-4774-A70E-6EB5721E6481}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{263C54A8-9401-4774-A70E-6EB5721E6481}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{263C54A8-9401-4774-A70E-6EB5721E6481}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DFECC55-530E-436A-A766-0A4595C70B33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DFECC55-530E-436A-A766-0A4595C70B33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DFECC55-530E-436A-A766-0A4595C70B33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DFECC55-530E-436A-A766-0A4595C70B33}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {750B8958-49E2-4A33-9C5C-CBC4376CA6D8}
+	EndGlobalSection
+EndGlobal
