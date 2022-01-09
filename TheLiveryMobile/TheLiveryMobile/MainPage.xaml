@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TheLiveryMobile.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#406E8E" Padding="24" CornerRadius="0">
+            <Label Text="Gaseste comanda" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Label Text="AWB" FontSize="64" HorizontalOptions="CenterAndExpand"   Padding="30,10,30,10">
+        </Label>
+        
+
+        <Entry x:Name="entry" Placeholder="Enter your awb"/>
+
+        <Button Text="Gaseste!"
+                Margin="0,50,0,0"
+                HorizontalOptions="Center"
+                Clicked="OnButtonClicked"
+                BackgroundColor="#8EA8C3"
+                TextColor="White" />
+    </StackLayout>
+
+</ContentPage>

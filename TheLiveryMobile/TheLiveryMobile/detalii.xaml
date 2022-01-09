@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TheLiveryMobile.detalii">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="#406E8E" Padding="24" CornerRadius="0">
+                <Label Text="Gaseste comanda" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            </Frame>
+
+            <ListView  x:Name="listView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout BackgroundColor="#eee"
+                        Orientation="Vertical">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Stare}"
+                                TextColor="Black" />
+                                    <Label Text="{Binding Data_livrare}"
+                                TextColor="Black" />
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Label x:Name="error"
+          VerticalOptions="CenterAndExpand" 
+          HorizontalOptions="CenterAndExpand" />
+
+            <Button Text="Inchide"
+                Margin="0,50,0,0"
+                Clicked="inchidePaginaClick"
+                HorizontalOptions="Center"
+                BackgroundColor="#8EA8C3"
+                TextColor="White" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
