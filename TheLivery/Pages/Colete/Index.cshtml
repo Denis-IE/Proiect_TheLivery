@@ -1,0 +1,72 @@
+﻿@page
+@model TheLivery.Pages.Colete.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Colet[0].Greutate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Colet[0].Inaltime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Colet[0].Latime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Colet[0].Descriere)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Colet[0].Cost)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Colet[0].Firma)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Colet[0].Client)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Colet) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Greutate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Inaltime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Latime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descriere)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Firma.ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Client.ID)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

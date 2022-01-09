@@ -1,0 +1,96 @@
+﻿@page
+@model TheLivery.Pages.Comenzi.IndexModel
+@{
+}
+
+@Model.Message
+<section class="all-sections">
+    <div class="h1 text-center text-dark mt-5 mb-5">Colete</div>
+
+    <table class="table">
+        <thead>
+            <tr class="text-center">
+                <th scope="col">Id_Colet</th>
+                <th scope="col">Expeditor</th>
+                <th scope="col">Destinatar</th>
+                <th scope="col">Adresa livrare</th>
+                <th scope="col">Greutate</th>
+                <th scope="col">Inaltime</th>
+                <th scope="col">Latime</th>
+                <th scope="col">Descriere</th>
+                <th scope="col">Stare</th>
+                <th scope="col">Cost</th>
+                <th scope="col">Preluare</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Colete)
+            {
+                if (item.Stare.Equals("Nepreluat"))
+                {
+                    <tr class="text-center">
+                    <th scope="row">@Html.DisplayFor(modelItem => item.ID)</th>
+                    <td>@Html.DisplayFor(modelItem => item.Firma.Nume)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Client.Nume_complet)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Client.Adresa)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Greutate)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Inaltime)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Latime)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Descriere)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Stare)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Cost)</td>
+                    <td>
+                        <form method="post">
+                            <input type="hidden" value="preia" />
+                            <input type="submit" value="Preia" class="button-submit text-light px-3 py-1" />
+                        </form>
+                    </td>
+                </tr>
+
+                }
+            
+            }
+            </tbody>
+    </table>
+</section>
+
+<section class="all-sections">
+    <div class="h1 text-center text-dark mt-5 mb-5">Comenzi</div>
+
+    <table class="table">
+        <thead>
+            <tr class="text-center">
+                <th scope="col">Id_Comanda</th>
+                <th scope="col">Curier</th>
+                <th scope="col">Id_Colet</th>
+                <th scope="col">Informatii aditionale</th>
+                <th scope="col">Data livrare</th>
+                <th scope="col">Cost</th>
+                <th scope="col">AWB</th>
+                <th scope="col">Stare</th>
+                <th scope="col">Preluare</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Comenzi)
+            {
+            <tr class="text-center">
+                <th scope="row">@Html.DisplayFor(modelItem => item.ID)</th>
+                <td> @Html.DisplayFor(modelItem => item.Curier.Nume_complet)</td>
+                <td>@Html.DisplayFor(modelItem => item.Colet.ID)</td>
+                <td>@Html.DisplayFor(modelItem => item.Informatii_aditionale)</td>
+                <td>@Html.DisplayFor(modelItem => item.Data_livrare)</td>
+                <td>@Html.DisplayFor(modelItem => item.Colet.Cost)</td>
+                <td>@Html.DisplayFor(modelItem => item.AWB)</td>
+                <td class="stare">@Html.DisplayFor(modelItem => item.Stare)</td>
+                <td>
+                    <form method="post">
+                        <input type="hidden" value="preia" />
+                        <input type="submit" value="Preia" class="button-submit text-light px-3 py-1" />
+                    </form>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</section>

@@ -1,0 +1,60 @@
+﻿@page
+@model TheLivery.Pages.Comenzi.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Comanda</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Comanda.ID" />
+            <div class="form-group">
+                <label asp-for="Comanda.CurierID" class="control-label"></label>
+                <select asp-for="Comanda.CurierID" class="form-control" asp-items="ViewBag.CurierID"></select>
+                <span asp-validation-for="Comanda.CurierID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Comanda.ColetID" class="control-label"></label>
+                <select asp-for="Comanda.ColetID" class="form-control" asp-items="ViewBag.ColetID"></select>
+                <span asp-validation-for="Comanda.ColetID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Comanda.Informatii_aditionale" class="control-label"></label>
+                <input asp-for="Comanda.Informatii_aditionale" class="form-control" />
+                <span asp-validation-for="Comanda.Informatii_aditionale" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Comanda.Stare" class="control-label"></label>
+                <input asp-for="Comanda.Stare" class="form-control" />
+                <span asp-validation-for="Comanda.Stare" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Comanda.Data_livrare" class="control-label"></label>
+                <input asp-for="Comanda.Data_livrare" class="form-control" />
+                <span asp-validation-for="Comanda.Data_livrare" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Comanda.AWB" class="control-label"></label>
+                <input asp-for="Comanda.AWB" class="form-control" />
+                <span asp-validation-for="Comanda.AWB" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

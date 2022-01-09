@@ -1,0 +1,62 @@
+﻿@page
+@model TheLivery.Pages.Colete.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Colet</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Colet.FirmaID" class="control-label"></label>
+                <select asp-for="Colet.FirmaID" class ="form-control" asp-items="ViewBag.FirmaID"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Colet.ClientID" class="control-label"></label>
+                <select asp-for="Colet.ClientID" class ="form-control" asp-items="ViewBag.ClientID"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Colet.Greutate" class="control-label"></label>
+                <input asp-for="Colet.Greutate" class="form-control" />
+                <span asp-validation-for="Colet.Greutate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Colet.Inaltime" class="control-label"></label>
+                <input asp-for="Colet.Inaltime" class="form-control" />
+                <span asp-validation-for="Colet.Inaltime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Colet.Latime" class="control-label"></label>
+                <input asp-for="Colet.Latime" class="form-control" />
+                <span asp-validation-for="Colet.Latime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Colet.Descriere" class="control-label"></label>
+                <input asp-for="Colet.Descriere" class="form-control" />
+                <span asp-validation-for="Colet.Descriere" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Colet.Cost" class="control-label"></label>
+                <input asp-for="Colet.Cost" class="form-control" />
+                <span asp-validation-for="Colet.Cost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

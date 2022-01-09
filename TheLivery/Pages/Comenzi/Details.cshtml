@@ -1,0 +1,55 @@
+﻿@page
+@model TheLivery.Pages.Comenzi.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Comanda</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Comanda.Informatii_aditionale)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Comanda.Informatii_aditionale)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Comanda.Stare)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Comanda.Stare)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Comanda.Data_livrare)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Comanda.Data_livrare)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Comanda.AWB)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Comanda.AWB)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Comanda.Colet)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Comanda.Colet.ID)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Comanda.Curier)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Comanda.Curier.ID)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Comanda.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
